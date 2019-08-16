@@ -13,6 +13,7 @@
 
 <?php
 setlocale(LC_MONETARY, 'ja_JP');//通貨表示用
+var_dump(setlocale(LC_MONETARY, 'ja_JP'));
 //ログイン認証
 require('auth.php');
  ?>
