@@ -1,0 +1,18 @@
+body{
+font-family: "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
+}
+
+.site-width{
+  width: 80%;
+}
+
+.header-left{
+  float:left;
+  width: 500px;
+}
+.header-right{
+  float:right;
+}
+.logo{
+  font-weight: bold;
+}
