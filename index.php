@@ -13,7 +13,7 @@
 
 <?php
 setlocale(LC_ALL, "ja_JP");//通貨表示用
-var_dump(setlocale(LC_ALL, "ja_JP"));
+// var_dump(setlocale(LC_ALL, "ja_JP"));
 //ログイン認証
 require('auth.php');
  ?>
@@ -207,7 +207,7 @@ require('header.php');
             </div>
             <div class="panel-body">
               <p class="panel-title"><?php echo $drawing['title'];?></p>
-              <p class="panel-price">希望価格 ： <?php echo number_format($drawing['submit_price']);?></p>
+              <p class="panel-price">希望価格 ： ¥ <?php echo number_format($drawing['submit_price']);?></p>
               <p class="panel-duedate">希望納期 ： <?php echo $drawing['work_due_date'];?></p>
             </div>
           </a>

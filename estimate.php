@@ -180,7 +180,7 @@ require('header.php');
             <tr>
               <th class="table-header">予算</th>
               <td class="drawingDetail-td th-right-line">
-                <?php echo money_format("%n",$viewData['submit_price']); ?>
+                ¥ <?php echo number_format($viewData['submit_price']); ?>
 							</td>
 							<td class="drawingDetail-td">
 							<input class="table-input table-input-varchar" type="text" name="estimate_price" value="<?php echo getFormData($user_id,'estimate_price') ?>" placeholder="見積もり価格">

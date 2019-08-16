@@ -158,7 +158,7 @@ require('header.php');
             <tr>
               <th class="table-header">予算</th>
               <td class="drawingDetail-td">
-							 <?php echo money_format("%n",$viewData['submit_price']); ?>
+							 ¥ <?php echo number_format($viewData['submit_price']); ?>
 							</td>
             </tr>
 
@@ -198,7 +198,7 @@ require('header.php');
             <tr>
               <th class="table-header">見積もり価格</th>
               <td class="drawingDetail-td">
-							 <?php echo money_format("%n",$key['estimate_price']); ?>
+							 ¥ <?php echo number_format($key['estimate_price']); ?>
 							</td>
             </tr>
 
