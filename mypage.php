@@ -132,7 +132,7 @@ require('header.php');
                   見積もり提出中図面はありません
                   <?php else: ?>
               <?php foreach($myEstimatedDrawings as $key1): ?>
-                    <a class="main-panel" href="drawingDetail.php?d_id=<?php echo $key1['id']; ?>">
+                    <a class="main-panel" href="drawingDetail.php?d_id=<?php echo $key1['d_id']; ?>">
                       <div class="panel-head">
                         <img class="panel-img" src="<?php echo $key1['pic1']; ?>" alt="">
                       </div>

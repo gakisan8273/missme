@@ -764,7 +764,7 @@ function getMyOrderedDrawings($u_id){
 function getMyEstimate($u_id){
   try{
     $dbh = dbconnect();
-    $sql = 'SELECT d.id, d.title, d.pic1, e.work_due_date, e.estimate_price, e.id, e.comment, e.update_date, u.id as u_id from drawings as d left join estimates as e on d.id = e.drawing_id left join users as u on e.user_id = u.id where u.id = :u_id';
+    $sql = 'SELECT d.id as d_id, d.title, d.pic1, e.work_due_date, e.estimate_price, e.id, e.comment, e.update_date, u.id as u_id from drawings as d left join estimates as e on d.id = e.drawing_id left join users as u on e.user_id = u.id where u.id = :u_id';
     $data = array(':u_id' => $u_id);
     $stmt = queryPost($dbh, $sql, $data);
     //querypostで失敗なら0が返ってくる
