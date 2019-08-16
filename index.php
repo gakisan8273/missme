@@ -12,8 +12,8 @@
  ?>
 
 <?php
-setlocale(LC_MONETARY, 'ja_JP');//通貨表示用
-var_dump(setlocale(LC_MONETARY, 'ja_JP'));
+setlocale(LC_MONETARY, 'ja_JP.UTF-8');//通貨表示用
+var_dump(setlocale(LC_MONETARY, 'ja_JP.UTF-8'));
 //ログイン認証
 require('auth.php');
  ?>
