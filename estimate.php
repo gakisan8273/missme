@@ -169,7 +169,7 @@ require('header.php');
             <tr>
               <th class="table-header">希望納期</th>
               <td class="drawingDetail-td th-right-line">
-								<?php echo $viewData['work_due_date']; ?>
+								<?php echo sanitize($viewData['work_due_date']); ?>
               </td>
               <td class="drawingDetail-td">
 								<input class="table-input table-input-varchar" type="date" name="work_due_date" value="<?php echo getFormData($user_id,'work_due_date') ?>" placeholder="納期">
@@ -180,7 +180,7 @@ require('header.php');
             <tr>
               <th class="table-header">予算</th>
               <td class="drawingDetail-td th-right-line">
-                ¥ <?php echo number_format($viewData['submit_price']); ?>
+                ¥ <?php echo sanitize(number_format($viewData['submit_price'])); ?>
 							</td>
 							<td class="drawingDetail-td">
 							<input class="table-input table-input-varchar" type="text" name="estimate_price" value="<?php echo getFormData($user_id,'estimate_price') ?>" placeholder="見積もり価格">
@@ -190,10 +190,10 @@ require('header.php');
             <tr>
               <th class="table-header">その他コメント</th>
               <td class="drawingDetail-td th-right-line">
-								<?php echo $viewData['detail']; ?>
+								<?php echo sanitize($viewData['detail']); ?>
 							</td>
 							<td class="drawingDetail-td">
-							<textarea class="table-input table-input-text" type="text" name="comment" value="<?php echo getFormData($user_id,'comment') ?>" placeholder="その他コメント"></textarea>
+							<textarea class="table-input table-input-text" type="text" name="comment" value="<?php echo sanitize(getFormData($user_id,'comment')) ?>" placeholder="その他コメント"></textarea>
               </td>
             </tr>
 					</table>

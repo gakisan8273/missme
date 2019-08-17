@@ -67,9 +67,9 @@ require('header.php');
                         <img class="panel-img" src="<?php echo $key1['pic1']; ?>" alt="">
                       </div>
                       <div class="panel-body">
-                        <p class="panel-title"><?php echo $key1['title']; ?></p>
-                        <p class="panel-price">希望価格：¥ <?php echo number_format($key1['submit_price']); ?></p>
-                        <p class="panel-duedate">希望納期：<?php echo $key1['work_due_date']; ?></p>
+                        <p class="panel-title"><?php echo sanitize($key1['title']); ?></p>
+                        <p class="panel-price">希望価格：¥ <?php echo sanitize(number_format($key1['submit_price'])); ?></p>
+                        <p class="panel-duedate">希望納期：<?php echo sanitize($key1['work_due_date']); ?></p>
                       </div>
                     </a>
                   <?php endforeach ;?>
@@ -87,9 +87,9 @@ require('header.php');
                     <img class="panel-img" src="<?php echo $key1['pic1']; ?>" alt="">
                   </div>
                   <div class="panel-body">
-                    <p class="panel-title"><?php echo $key1['title']; ?></p>
-                    <p class="panel-price">発注価格：¥ <?php echo number_format($key1['work_price']); ?></p>
-                    <p class="panel-duedate">納品期日：<?php echo $key1['work_due_date']; ?></p>
+                    <p class="panel-title"><?php echo sanitize($key1['title']); ?></p>
+                    <p class="panel-price">発注価格：¥ <?php echo sanitize(number_format($key1['work_price'])); ?></p>
+                    <p class="panel-duedate">納品期日：<?php echo sanitize($key1['work_due_date']); ?></p>
                   </div>
                 </a>
               <?php endforeach;?>
@@ -117,9 +117,9 @@ require('header.php');
                         <img class="panel-img" src="<?php echo $key1['pic1']; ?>" alt="">
                       </div>
                       <div class="panel-body">
-                        <p class="panel-title"><?php echo $key1['title']; ?></p>
-                        <p class="panel-price">希望価格：¥ <?php echo number_format($key1['submit_price']); ?></p>
-                        <p class="panel-duedate">希望納期：<?php echo $key1['work_due_date']; ?></p>
+                        <p class="panel-title"><?php echo sanitize($key1['title']); ?></p>
+                        <p class="panel-price">希望価格：¥ <?php echo sanitize(number_format($key1['submit_price'])); ?></p>
+                        <p class="panel-duedate">希望納期：<?php echo sanitize($key1['work_due_date']); ?></p>
                       </div>
                     </a>
 <?php endforeach;?>
@@ -137,9 +137,9 @@ require('header.php');
                         <img class="panel-img" src="<?php echo $key1['pic1']; ?>" alt="">
                       </div>
                       <div class="panel-body">
-                        <p class="panel-title"><?php echo $key1['title']; ?></p>
-                        <p class="panel-price">見積価格：¥ <?php echo number_format($key1['estimate_price']); ?></p>
-                        <p class="panel-duedate">希望納期：<?php echo $key1['work_due_date']; ?></p>
+                        <p class="panel-title"><?php echo sanitize($key1['title']); ?></p>
+                        <p class="panel-price">見積価格：¥ <?php echo sanitize(number_format($key1['estimate_price'])); ?></p>
+                        <p class="panel-duedate">希望納期：<?php echo sanitize($key1['work_due_date']); ?></p>
                       </div>
                     </a>
 <?php endforeach;?>
@@ -156,9 +156,9 @@ require('header.php');
                         <img class="panel-img" src="<?php echo $key1['pic1']; ?>" alt="">
                       </div>
                       <div class="panel-body">
-                        <p class="panel-title"><?php echo $key1['title']; ?></p>
-                        <p class="panel-price">請負価格：¥ <?php echo number_format($key1['work_price']); ?></p>
-                        <p class="panel-duedate">納品期日：<?php echo $key1['work_due_date']; ?></p>
+                        <p class="panel-title"><?php echo sanitize($key1['title']); ?></p>
+                        <p class="panel-price">請負価格：¥ <?php echo sanitize(number_format($key1['work_price'])); ?></p>
+                        <p class="panel-duedate">納品期日：<?php echo sanitize($key1['work_due_date']); ?></p>
                       </div>
                     </a>
 <?php endforeach;?>

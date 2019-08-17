@@ -120,7 +120,7 @@ require('header.php');
         <label class="form form-label" for="">メールアドレス</label>
         <span class="error-msg error-email"><?php if(!empty($err_msg['email'])){ echo $err_msg['email']; } ?></span>
         <input class="form form-input" type="text" name="email"
-        value="<?php if(!empty($_POST['email'])) echo $_POST['email']; ?>"
+        value="<?php if(!empty($_POST['email'])) echo sanitize($_POST['email']); ?>"
          placeholder="メールアドレス">
 
         <input class="form form-submit" type="submit" name="resister" value="認証キー送信">

@@ -138,7 +138,7 @@ require('header.php');
             <tr>
               <th class="table-header">希望納期</th>
               <td class="drawingDetail-td">
-								<?php echo $viewData['work_due_date']; ?>
+								<?php echo sanitize($viewData['work_due_date']); ?>
               </td>
 
             </tr>
@@ -146,21 +146,21 @@ require('header.php');
             <tr>
               <th class="table-header">予算</th>
               <td class="drawingDetail-td">
-							 ¥ <?php echo number_format($viewData['submit_price']); ?>
+							 ¥ <?php echo sanitize(number_format($viewData['submit_price'])); ?>
 							</td>
             </tr>
 
             <tr>
               <th class="table-header">見積もり回答期限</th>
               <td class="drawingDetail-td">
-								<?php echo $viewData['estimate_due_date']; ?>
+								<?php echo sanitize($viewData['estimate_due_date']); ?>
 							</td>
             </tr>
 
             <tr>
               <th class="table-header">その他コメント</th>
               <td class="drawingDetail-td">
-								<?php echo $viewData['detail']; ?>
+								<?php echo sanitize($viewData['detail']); ?>
 							</td>
             </tr>
           </table>
@@ -192,35 +192,35 @@ require('header.php');
             <tr>
               <th class="table-header">会社名</th>
               <td class="drawingDetail-td">
-								<?php echo $viewData['company']; ?>
+								<?php echo sanitize($viewData['company']); ?>
 							</td>
             </tr>
 
             <tr>
               <th class="table-header">担当者名</th>
               <td class="drawingDetail-td">
-								<?php echo $viewData['name']; ?>
+								<?php echo sanitize($viewData['name']); ?>
 							</td>
             </tr>
 
             <tr>
               <th class="table-header">住所</th>
               <td class="drawingDetail-td">
-								<?php echo $viewData['address']; ?>
+								<?php echo sanitize($viewData['address']); ?>
 							</td>
 						</tr>
 						
 						<tr>
               <th class="table-header">電話番号</th>
               <td class="drawingDetail-td">
-								<?php echo $viewData['tel']; ?>
+								<?php echo sanitize($viewData['tel']); ?>
 							</td>
 						</tr>
 
 						<tr>
               <th class="table-header">メールアドレス</th>
               <td class="drawingDetail-td">
-								<?php echo $viewData['email']; ?>
+								<?php echo sanitize($viewData['email']); ?>
 							</td>
             </tr>
 
@@ -252,17 +252,17 @@ require('header.php');
 
 								<?php if($viewData['submit_user_id'] === $msgData[$i]['id']){?>
 									<p class="msg-comment msg-comment-submiter">
-										<?php echo $msgData[$i]['comment']?>
+										<?php echo sanitize($msgData[$i]['comment'])?>
 									</p>
 									<p class="msg-user msg-user-submiter">
-										<?php echo $msgData[$i]['company'].'(依頼者)'?>
+										<?php echo sanitize($msgData[$i]['company']).'(依頼者)'?>
 									</p>
 								<?php }else{ ?>
 									<p class="msg-user msg-user-worker">
-										<?php echo $msgData[$i]['company']?>
+										<?php echo sanitize($msgData[$i]['company'])?>
 									</p>
 									<p class="msg-comment msg-comment-worker">
-										<?php echo $msgData[$i]['comment']?>
+										<?php echo sanitize($msgData[$i]['comment'])?>
 									</p>
 								<?php }?><!-- ifの終わり -->
 
@@ -279,7 +279,7 @@ require('header.php');
           <table class="table table-profEdit">
             <tr>
               <th class="table-header">投稿<br><span class="error-msg table-err"><?php if(!empty($err_msg['msg'])){ echo $err_msg['msg']; } ?></th>
-              <td><textarea class="table-input table-input-text" type="text" name="msg" value="" placeholder="質問 / 回答"><?php if(!empty($_POST['msg']) && !empty($err_msg['msg'])) echo $_POST['msg']; ?></textarea></td>
+              <td><textarea class="table-input table-input-text" type="text" name="msg" value="" placeholder="質問 / 回答"><?php if(!empty($_POST['msg']) && !empty($err_msg['msg'])) echo sanitize($_POST['msg']); ?></textarea></td>
             </tr>
           </table>
 

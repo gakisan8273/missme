@@ -138,16 +138,16 @@ require('header.php');
         <label class="form form-label" for="">現在のパスワード</label>
         <span class="error-msg error-email"><?php if(!empty($err_msg['currentPass'])){ echo $err_msg['currentPass']; } ?></span>
         <input class="form form-input" type="password" name="currentPass"
-        value="<?php if(!empty($_POST['currentPass'])) echo $_POST['currentPass']; ?>"
+        value="<?php if(!empty($_POST['currentPass'])) echo sanitize($_POST['currentPass']); ?>"
          placeholder="現在のパスワード">
 
         <label class="form form-label" for="">新しいパスワード</label>
         <span class="error-msg error-email"><?php if(!empty($err_msg['newPass'])){ echo $err_msg['newPass']; } ?></span>
-        <input class="form form-input" type="password" name="newPass" placeholder="半角英数字6〜10文字" value="<?php if(!empty($_POST['newPass'])) echo $_POST['newPass']; ?>">
+        <input class="form form-input" type="password" name="newPass" placeholder="半角英数字6〜10文字" value="<?php if(!empty($_POST['newPass'])) echo sanitize($_POST['newPass']); ?>">
 
         <label class="form form-label" for="">新しいパスワード再入力</label>
         <span class="error-msg error-email"><?php if(!empty($err_msg['re-newPass'])){ echo $err_msg['re-newPass']; } ?></span>
-        <input class="form form-input" type="password" name="re-newPass" placeholder="新しいパスワード再入力" value="<?php if(!empty($_POST['re-newPass'])) echo $_POST['re-newPass']; ?>">
+        <input class="form form-input" type="password" name="re-newPass" placeholder="新しいパスワード再入力" value="<?php if(!empty($_POST['re-newPass'])) echo sanitize($_POST['re-newPass']); ?>">
 
         <input class="form form-submit" type="submit" name="passEdit" value="パスワード変更">
       </form>

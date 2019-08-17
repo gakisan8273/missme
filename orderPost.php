@@ -187,29 +187,29 @@ require('header.php');
 
             <tr>
               <th class="table-header">個数<br><span class="error-msg table-err"><?php if(!empty($err_msg['quantity'])){ echo $err_msg['quantity']; } ?></th>
-              <td><input class="table-input table-input-varchar" type="text" name="quantity" value="<?php echo getFormData($user_id,'quantity') ?>" placeholder="個数　半角数字のみ"></td>
+              <td><input class="table-input table-input-varchar" type="text" name="quantity" value="<?php echo sanitize(getFormData($user_id,'quantity')) ?>" placeholder="個数　半角数字のみ"></td>
             </tr>
 
             <tr>
               <th class="table-header">希望合計金額<br><span class="error-msg table-err"><?php if(!empty($err_msg['hopeMoney'])){ echo $err_msg['hopeMoney']; } ?></span></th>
               <td>
-                <input class="table-input table-input-varchar" type="text" name="hopeMoney" value="<?php echo getFormData($user_id,'hopeMoney') ?>" placeholder="希望合計金額　半角数字のみ">
+                <input class="table-input table-input-varchar" type="text" name="hopeMoney" value="<?php echo sanitize(getFormData($user_id,'hopeMoney') )?>" placeholder="希望合計金額　半角数字のみ">
               </td>
             </tr>
 
             <tr>
               <th class="table-header">希望納期<br><span class="error-msg table-err"><?php if(!empty($err_msg['hopeDueDate'])){ echo $err_msg['hopeDueDate']; } ?></th>
-              <td><input class="table-input table-input-varchar" type="date" name="hopeDueDate" value="<?php echo getFormData($user_id,'hopeDueDate') ?>" placeholder="希望納期　yyyy-mm-dd"></td>
+              <td><input class="table-input table-input-varchar" type="date" name="hopeDueDate" value="<?php echo sanitize(getFormData($user_id,'hopeDueDate')) ?>" placeholder="希望納期　yyyy-mm-dd"></td>
             </tr>
 
             <tr>
               <th class="table-header">回答期限<br><span class="error-msg table-err"><?php if(!empty($err_msg['estimateDueDate'])){ echo $err_msg['estimateDueDate']; } ?></th>
-              <td><input class="table-input table-input-varchar" type="date" name="estimateDueDate" value="<?php echo getFormData($user_id,'estimateDueDate') ?>" placeholder="回答期限 yyyy-mm-dd"></td>
+              <td><input class="table-input table-input-varchar" type="date" name="estimateDueDate" value="<?php echo sanitize(getFormData($user_id,'estimateDueDate')) ?>" placeholder="回答期限 yyyy-mm-dd"></td>
             </tr>
 
             <tr>
               <th class="table-header">詳細<br><span class="error-msg table-err"><?php if(!empty($err_msg['detail'])){ echo $err_msg['detail']; } ?></th>
-              <td><textarea class="table-input table-input-text" type="text" name="detail" value="<?php echo getFormData($user_id,'detail') ?>" placeholder="詳細"></textarea></td>
+              <td><textarea class="table-input table-input-text" type="text" name="detail" value="<?php echo sanitize(getFormData($user_id,'detail')) ?>" placeholder="詳細"></textarea></td>
             </tr>
 
             <!-- 画像をアップロード -->

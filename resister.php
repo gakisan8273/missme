@@ -119,16 +119,16 @@ require('header.php');
         <label class="form form-label" for="">メールアドレス</label>
         <span class="error-msg error-email"><?php if(!empty($err_msg['email'])){ echo $err_msg['email']; } ?></span>
         <input class="form form-input" type="text" name="email"
-        value="<?php if(!empty($_POST['email'])) echo $_POST['email']; ?>"
+        value="<?php if(!empty($_POST['email'])) echo sanitize($_POST['email']); ?>"
          placeholder="メールアドレス">
 
         <label class="form form-label" for="">パスワード</label>
         <span class="error-msg error-email"><?php if(!empty($err_msg['pass'])){ echo $err_msg['pass']; } ?></span>
-        <input class="form form-input" type="password" name="pass" placeholder="半角英数字6〜10文字" value="<?php if(!empty($_POST['pass'])) echo $_POST['pass']; ?>">
+        <input class="form form-input" type="password" name="pass" placeholder="半角英数字6〜10文字" value="<?php if(!empty($_POST['pass'])) echo sanitize($_POST['pass']); ?>">
 
         <label class="form form-label" for="">パスワード再入力</label>
         <span class="error-msg error-email"><?php if(!empty($err_msg['re-pass'])){ echo $err_msg['re-pass']; } ?></span>
-        <input class="form form-input" type="password" name="re-pass" placeholder="パスワード再入力" value="<?php if(!empty($_POST['re-pass'])) echo $_POST['re-pass']; ?>">
+        <input class="form form-input" type="password" name="re-pass" placeholder="パスワード再入力" value="<?php if(!empty($_POST['re-pass'])) echo sanitize($_POST['re-pass']); ?>">
 
         <input class="form form-submit" type="submit" name="resister" value="新規登録">
       </form>

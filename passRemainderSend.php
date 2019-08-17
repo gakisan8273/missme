@@ -135,7 +135,7 @@ require('header.php');
         <label class="form form-label" for="">認証キー</label>
         <span class="error-msg error-email"><?php if(!empty($err_msg['authkey'])){ echo $err_msg['authkey']; } ?></span>
         <input class="form form-input" type="text" name="authkey"
-        value="<?php if(!empty($_POST['authkey'])) echo $_POST['authkey']; ?>"
+        value="<?php if(!empty($_POST['authkey'])) echo sanitize($_POST['authkey']); ?>"
          placeholder="認証キー">
 
         <input class="form form-submit" type="submit" name="btn" value="パスワード再発行">

@@ -206,9 +206,9 @@ require('header.php');
                 <img class="panel-img" src="<?php echo $drawing['pic1'];?>" alt="">
             </div>
             <div class="panel-body">
-              <p class="panel-title"><?php echo $drawing['title'];?></p>
-              <p class="panel-price">希望価格 ： ¥ <?php echo number_format($drawing['submit_price']);?></p>
-              <p class="panel-duedate">希望納期 ： <?php echo $drawing['work_due_date'];?></p>
+              <p class="panel-title"><?php echo sanitize($drawing['title']);?></p>
+              <p class="panel-price">希望価格 ： ¥ <?php echo sanitize(number_format($drawing['submit_price']));?></p>
+              <p class="panel-duedate">希望納期 ： <?php echo sanitize($drawing['work_due_date']);?></p>
             </div>
           </a>
         <?php }?>

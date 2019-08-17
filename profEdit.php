@@ -121,7 +121,7 @@ require('header.php');
             <tr>
               <th class="table-header">会社名<br><span class="error-msg table-err"><?php if(!empty($err_msg['company'])){ echo $err_msg['company']; } ?></th>
               <td>
-                <input class="table-input table-input-varchar" type="text" name="company" value="<?php echo getFormData($user_id,'company') ?>" placeholder="会社名">
+                <input class="table-input table-input-varchar" type="text" name="company" value="<?php echo sanitize(getFormData($user_id,'company')) ?>" placeholder="会社名">
               </td>
               <!-- POSTがあればPOSTを表示、なければDBの値を表示 -->
 
@@ -129,24 +129,24 @@ require('header.php');
 
             <tr>
               <th class="table-header">代表者名<br><span class="error-msg table-err"><?php if(!empty($err_msg['name'])){ echo $err_msg['name']; } ?></th>
-              <td><input class="table-input table-input-varchar" type="text" name="name" value="<?php echo getFormData($user_id,'name') ?>" placeholder="代表者名"></td>
+              <td><input class="table-input table-input-varchar" type="text" name="name" value="<?php echo sanitize(getFormData($user_id,'name')) ?>" placeholder="代表者名"></td>
             </tr>
 
             <tr>
               <th class="table-header">メールアドレス<br><span class="error-msg table-err"><?php if(!empty($err_msg['email'])){ echo $err_msg['email']; } ?></span></th>
               <td>
-                <input class="table-input table-input-varchar" type="text" name="email" value="<?php echo getFormData($user_id,'email') ?>" placeholder="メールアドレス">
+                <input class="table-input table-input-varchar" type="text" name="email" value="<?php echo sanitize(getFormData($user_id,'email')) ?>" placeholder="メールアドレス">
               </td>
             </tr>
 
             <tr>
               <th class="table-header">電話番号<br><span class="error-msg table-err"><?php if(!empty($err_msg['tel'])){ echo $err_msg['tel']; } ?></th>
-              <td><input class="table-input table-input-varchar" type="text" name="tel" value="<?php echo getFormData($user_id,'tel') ?>" placeholder="電話番号"></td>
+              <td><input class="table-input table-input-varchar" type="text" name="tel" value="<?php echo sanitize(getFormData($user_id,'tel')) ?>" placeholder="電話番号"></td>
             </tr>
 
             <tr>
               <th class="table-header">住所<br><span class="error-msg table-err"><?php if(!empty($err_msg['address'])){ echo $err_msg['address']; } ?></th>
-              <td><input class="table-input table-input-text" type="text" name="address" value="<?php echo getFormData($user_id,'address') ?>" placeholder="住所"></td>
+              <td><input class="table-input table-input-text" type="text" name="address" value="<?php echo sanitize(getFormData($user_id,'address')) ?>" placeholder="住所"></td>
             </tr>
 
           </table>

@@ -811,3 +811,8 @@ function getMyWorkDrawings($u_id){
     $err_msg[$key] = $e->getMessage();   
   }
 }
+
+function sanitize($str){
+  return htmlspecialchars($str,ENT_QUOTES); //シングル・ダブルクォートを共に変換する
+
+}

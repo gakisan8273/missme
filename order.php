@@ -150,7 +150,7 @@ require('header.php');
             <tr>
               <th class="table-header">希望納期</th>
               <td class="drawingDetail-td">
-								<?php echo $viewData['work_due_date']; ?>
+								<?php echo sanitize($viewData['work_due_date']); ?>
               </td>
 
             </tr>
@@ -158,21 +158,21 @@ require('header.php');
             <tr>
               <th class="table-header">予算</th>
               <td class="drawingDetail-td">
-							 ¥ <?php echo number_format($viewData['submit_price']); ?>
+							 ¥ <?php echo sanitize(number_format($viewData['submit_price'])); ?>
 							</td>
             </tr>
 
             <tr>
               <th class="table-header">見積もり回答期限</th>
               <td class="drawingDetail-td">
-								<?php echo $viewData['estimate_due_date']; ?>
+								<?php echo sanitize($viewData['estimate_due_date']); ?>
 							</td>
             </tr>
 
             <tr>
               <th class="table-header">その他コメント</th>
               <td class="drawingDetail-td">
-								<?php echo $viewData['detail']; ?>
+								<?php echo sanitize($viewData['detail']); ?>
 							</td>
             </tr>
           </table>                    
@@ -190,7 +190,7 @@ require('header.php');
             <tr>
               <th class="table-header">納期</th>
               <td class="drawingDetail-td">
-								<?php echo $key['work_due_date']; ?>
+								<?php echo sanitize($key['work_due_date']); ?>
               </td>
 
             </tr>
@@ -198,14 +198,14 @@ require('header.php');
             <tr>
               <th class="table-header">見積もり価格</th>
               <td class="drawingDetail-td">
-							 ¥ <?php echo number_format($key['estimate_price']); ?>
+							 ¥ <?php echo sanitize(number_format($key['estimate_price'])); ?>
 							</td>
             </tr>
 
             <tr>
               <th rowspan="3" class="table-header">その他コメント</th>
               <td rowspan="3" class="drawingDetail-td">
-								<?php echo $key['comment']; ?>
+								<?php echo sanitize($key['comment']); ?>
 							</td>
             </tr>
             <tr></tr><tr></tr>
@@ -215,35 +215,35 @@ require('header.php');
             <tr>
               <th class="table-header">会社名</th>
               <td class="drawingDetail-td">
-								<?php echo $key['company']; ?>
+								<?php echo sanitize($key['company']); ?>
 							</td>
             </tr>
 
             <tr>
               <th class="table-header">担当者名</th>
               <td class="drawingDetail-td">
-								<?php echo $key['name']; ?>
+								<?php echo sanitize($key['name']); ?>
 							</td>
             </tr>
 
             <tr>
               <th class="table-header">住所</th>
               <td class="drawingDetail-td">
-								<?php echo $key['address']; ?>
+								<?php echo sanitize($key['address']); ?>
 							</td>
 						</tr>
 						
 						<tr>
               <th class="table-header">電話番号</th>
               <td class="drawingDetail-td">
-								<?php echo $key['tel']; ?>
+								<?php echo sanitize($key['tel']); ?>
 							</td>
 						</tr>
 
 						<tr>
               <th class="table-header">メールアドレス</th>
               <td class="drawingDetail-td">
-								<?php echo $key['email']; ?>
+								<?php echo sanitize($key['email']); ?>
 							</td>
             </tr>
 
@@ -252,9 +252,9 @@ require('header.php');
         <div class="btn-container">
             <div class="btn-container2">
                 <form action="" method="post">
-										<input type="hidden" name="work_due_date" value="<?php echo $key['work_due_date'] ?>">
-										<input type="hidden" name="submit_price" value="<?php echo $key['estimate_price'] ?>">
-										<input type="hidden" name="u_id" value="<?php echo $key['u_id'] ?>">
+										<input type="hidden" name="work_due_date" value="<?php echo sanitize($key['work_due_date']) ?>">
+										<input type="hidden" name="submit_price" value="<?php echo sanitize($key['estimate_price']) ?>">
+										<input type="hidden" name="u_id" value="<?php echo sanitize($key['u_id']) ?>">
                    <button name="order" type="submit" class="btn estimete-btn form-submit btn-order">↑の見積もりに発注する</button>
                 </form>
             </div>
