@@ -93,4 +93,6 @@ $context = array(
 $Scontext = stream_context_create($context);
 $json = file_get_contents($requestUrl, false, $Scontext);
 
+echo $json;
+
 ?>
