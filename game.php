@@ -116,7 +116,7 @@ if(!empty($_POST)){
     <script type="text/javascript">
       var panelQuantity = '<?php echo $PANELQUANTITY?>';
     </script>
-    <script src="jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="game.js"></script>
   </body>
 </html>
