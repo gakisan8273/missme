@@ -28,11 +28,11 @@ ini_set('display_errors','On'); //画面にエラーを表示させるか
 
 // $dbh = new PDO($dsn, $user, $password, $options);
 
-if(!empty($_POST)){
-  $clear_time = $_POST['stop_watch'];
-  $stmt = $dbh->prepare('INSERT INTO clear_time(clearTime) VALUES(:clearTime)');
-  $stmt->execute(array(':clearTime' => $clear_time));
-}
+// if(!empty($_POST)){
+//   $clear_time = $_POST['stop_watch'];
+//   $stmt = $dbh->prepare('INSERT INTO clear_time(clearTime) VALUES(:clearTime)');
+//   $stmt->execute(array(':clearTime' => $clear_time));
+// }
 
 
 // 過去のタイムスタンプと秒数を、５個まで表示
@@ -103,11 +103,11 @@ if(!empty($_POST)){
       </div>
       <div class="img_end">
       <img class="site-width img_end" src="images/train_move1.gif"><br><br><br>
-        <?php echo $date[0].' '.$time[0]. ' びょう<br>' ?>
+        <!-- <?php echo $date[0].' '.$time[0]. ' びょう<br>' ?>
         <?php echo $date[1].' '.$time[1]. ' びょう<br>' ?>
         <?php echo $date[2].' '.$time[2]. ' びょう<br>' ?>
         <?php echo $date[3].' '.$time[3]. ' びょう<br>' ?>
-        <?php echo $date[4].' '.$time[4]. ' びょう<br>' ?>
+        <?php echo $date[4].' '.$time[4]. ' びょう<br>' ?> -->
       </div>
     </section>
 

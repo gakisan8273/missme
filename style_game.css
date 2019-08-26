@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'mini-wakuwaku';
+  src:url('font/mini-wakuwaku.otf') format('opentype');
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'mini-wakuwaku';
+}
+li{
+  margin-top: 5px;
+  list-style: none;
+}
+
+.site-width{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header{
+height: 30px;
+background: #f1f1f1;
+}
+
+header a{
+  text-decoration: none;
+  color: #444;
+}
+
+header .btn{
+  display: block;
+  height: inherit;
+  width:100px;
+  text-align: center;
+  margin-right: 10px;
+  padding: 5px;
+  float: left;
+}
+
+.header_container{
+  overflow: hidden;
+  height: inherit;
+}
+.btn_container{
+  float: right;
+}
+
+.top h1, .top p{
+  font-size: 48px;
+  font-weight: normal;
+}
+
+.panel_container{
+  width:80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.panel_container p{
+  cursor: pointer;
+}
+
+.panel{
+  width:20%;
+  height: 50px;
+  padding: 0px;
+  margin:10px 5px;
+  box-sizing: border-box;
+  background: green;
+  border-radius: 100px;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  font-size: 24px;
+  /* filter: drop-shadow(5px 5px 5px; rgba(255, 0, 0, 0.5);); */
+  box-shadow: 5px 5px;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.panel:active{
+  position: relative;
+  top: 5px;
+  left: 5px;
+  box-shadow: none;
+}
+
+.color_0{background: #E3728B;}
+.color_1{background: #E8A491;}
+.color_2{background: #EBC89B;}
+.color_3{background: #76BAAC;}
+.color_4{background: #55ADB3;}
+
+.success{
+  visibility: hidden;
+}
+
+.false{
+  background: red;
+}
+
+.img_end{
+  display: none;
+  text-align:center;
+}
+.blink{
+  animation: blinkAnimeS1 2s infinite alternate;
+}
+@keyframes blinkAnimeS1{
+ 0%  { color : yellow }  /* 33%ごとに色を入れ替え */
+ 33% { color : blue   }
+ 66% { color : green  }
+ 100%{ color : red    }
+}
+.game_start{
+  cursor: pointer;
+}
+
+input[type="submit"]{
+  /* border-style: ; */
+  display: inline-block;
+  font-size: 20px;
+  height: 50px;
+  width: 100px;
+  padding: 20px;
+  font-family: 'mini-wakuwaku';
+}
+
+.game_page{
+  display: none;
+}
+
+form{
+  text-align: center;
+}
+
+input{
+    font-family: 'mini-wakuwaku';
+    width:50px;
+    height: 50px;
+    font-size: 32px;
+    text-align: center;
+    border: none;
+}
+
+form p input{
+  float: left;
+}
+form p{
+  display: inline-block;
+  font-size: 28px;
+}
+
+.top .result{
+  font-size: 20px;
+}
+
+ul{
+  text-align: center;
+}
