@@ -13,20 +13,20 @@ ini_set('display_errors','On'); //画面にエラーを表示させるか
 // POSTの値（秒数）を取得
 // 秒数とタイムスタンプをDBに登録
 
-$dsn = 'mysql:dbname=Child_game;host=localhost;charset=utf8'; //Data Source Name
-$user = 'root';
-$password = 'root';
-$options = array(
-  // SQL実行失敗時に例外をスロー
-  PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-  // デフォルトフェッチモードを連想配列形式に設定
-  PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-  // バッファードクエリを使う(一度に結果セットをすべて取得し、サーバー負荷を軽減)
-  // SELECTで得た結果に対してもrowCountメソッドを使えるようにする
-  PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
-);
+// $dsn = 'mysql:dbname=Child_game;host=localhost;charset=utf8'; //Data Source Name
+// $user = 'root';
+// $password = 'root';
+// $options = array(
+//   // SQL実行失敗時に例外をスロー
+//   PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+//   // デフォルトフェッチモードを連想配列形式に設定
+//   PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+//   // バッファードクエリを使う(一度に結果セットをすべて取得し、サーバー負荷を軽減)
+//   // SELECTで得た結果に対してもrowCountメソッドを使えるようにする
+//   PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
+// );
 
-$dbh = new PDO($dsn, $user, $password, $options);
+// $dbh = new PDO($dsn, $user, $password, $options);
 
 if(!empty($_POST)){
   $clear_time = $_POST['stop_watch'];
@@ -37,16 +37,16 @@ if(!empty($_POST)){
 
 // 過去のタイムスタンプと秒数を、５個まで表示
 
-$sql = 'SELECT date,clearTime FROM clear_time ORDER BY date DESC LIMIT 5;';
-$stmt = $dbh->query($sql);
-$date = array();
-$time = array();
+// $sql = 'SELECT date,clearTime FROM clear_time ORDER BY date DESC LIMIT 5;';
+// $stmt = $dbh->query($sql);
+// $date = array();
+// $time = array();
 
-while ($result = $stmt->fetch(PDO::FETCH_ASSOC)){
+// while ($result = $stmt->fetch(PDO::FETCH_ASSOC)){
 
-  $date[] = $result['date'];
-  $time[] = $result['clearTime'];
-}
+//   $date[] = $result['date'];
+//   $time[] = $result['clearTime'];
+// }
  ?>
 
 
@@ -70,14 +70,14 @@ while ($result = $stmt->fetch(PDO::FETCH_ASSOC)){
         <section class="top site-width start_page">
             <h1>すうじあわせ</h1>
             <p class="game_start">あそぶ！！</p>
-            <p class="result">まえに あそんだ けっか</p>
+            <!-- <p class="result">まえに あそんだ けっか</p>
             <ul>
               <li><?php echo $date[0].' '.$time[0]. ' びょう<br>' ?></li>
               <li><?php echo $date[1].' '.$time[1]. ' びょう<br>' ?></li>
               <li><?php echo $date[2].' '.$time[2]. ' びょう<br>' ?></li>
               <li><?php echo $date[3].' '.$time[3]. ' びょう<br>' ?></li>
               <li><?php echo $date[4].' '.$time[4]. ' びょう<br>' ?></li>
-            </ul>
+            </ul> -->
         </section>
     <section class="top site-width game_page">
         <h1>この すうじを　さがしてね！</h1>
